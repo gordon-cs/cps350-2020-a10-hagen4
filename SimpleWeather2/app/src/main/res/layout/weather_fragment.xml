@@ -1,67 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/id_cl"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".WeatherFragment">
+
+
+    <LinearLayout
+        android:layout_width="411dp"
+        android:layout_height="278dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:context=".WeatherFragment"
+        tools:layout_editor_absoluteY="453dp"
+        android:layout_alignParentLeft="true">
+
+
+        <TextView
+            android:id="@+id/getData"
+            android:layout_width="332dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:text="data"
+            android:textSize="45dp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.50"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.80" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/getSummary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:layout_marginLeft="25dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="51dp"
         android:text="summary"
         android:textSize="25dp"
-        android:textStyle="normal" />
+        android:textStyle="normal"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="55dp" />
 
     <TextView
         android:id="@+id/getTemp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="25dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="100dp"
         android:text="temperature"
         android:textSize="45dp"
-        android:textStyle="normal"/>
+        android:textStyle="normal"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="113dp" />
 
     <ImageView
         android:id="@+id/weatherIcon"
-        android:layout_below="@+id/getTemp"
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="25dp"
-        android:background="#00a8cc" />
+        android:layout_below="@+id/getTemp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="23dp"
+        android:background="#00a8cc"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="187dp" />
 
     <TextView
         android:id="@+id/getLocation"
-        android:layout_below="@+id/weatherIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="25dp"
+        android:layout_below="@+id/weatherIcon"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="25dp"
         android:text="location"
         android:textSize="20dp"
-        android:textStyle="normal" />
-
-    <TextView
-        android:id="@+id/getData"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
-        android:layout_gravity="center"
-        android:text="data"
-        android:textSize="45dp"
         android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.50"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.80" />
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="282dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="28dp" />
 
-
-</LinearLayout>
+</RelativeLayout>

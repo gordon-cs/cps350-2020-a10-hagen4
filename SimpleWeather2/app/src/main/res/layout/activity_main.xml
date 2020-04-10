@@ -56,8 +56,6 @@
                 android:text="Go" />
 
         </LinearLayout>
-
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
