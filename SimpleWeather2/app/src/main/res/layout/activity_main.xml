@@ -8,80 +8,68 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:text="Good Day!"
-        android:textAlignment="center"
-        android:gravity="center_horizontal"
-        android:background="#333"
-        android:textColor="#fff" />
-
-    <TextView
         android:id="@+id/getSummary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="(fetching data...)"
-        android:textSize="30dp"
-        android:textAlignment="center"
-        android:layout_gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search" />
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="25dp"
+        android:text="summary"
+        android:textSize="25dp"
+        android:textStyle="normal" />
 
     <TextView
         android:id="@+id/getTemp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="(fetching data...)"
+        android:layout_marginLeft="25dp"
+        android:text="temperature"
         android:textSize="45dp"
-        android:textAlignment="center"
-        android:layout_gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search" />
+        android:textStyle="normal"/>
 
     <ImageView
-        android:id="@+id/image"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:textAlignment="center"
-        android:layout_gravity="center"
+        android:id="@+id/weatherIcon"
+        android:layout_below="@+id/getTemp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_marginTop="10dp"
-        />
+        android:layout_marginLeft="25dp"
+        android:background="#00a8cc" />
 
     <TextView
-        android:id="@+id/sendRequest"
+        android:id="@+id/getLocation"
+        android:layout_below="@+id/weatherIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="(fetching data...)"
+        android:layout_marginLeft="25dp"
+        android:text="location"
         android:textSize="20dp"
-        android:textAlignment="center"
-        android:layout_gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search" />
+        android:textStyle="normal" />
 
     <Button
         android:id="@+id/go"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:layout_marginLeft="25dp"
         android:layout_marginBottom="40dp"
-        android:padding="10dp"
-        android:text="New Data"
-        android:layout_gravity="center"
+        android:padding="5dp"
+        android:text="°F/°C"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <TextView
+        android:id="@+id/zipcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please Enter Zipcode"
+        android:textSize="20dp"
+        android:textStyle="normal"
+        android:textAlignment="center"
+        android:layout_gravity="center" />
 
     <EditText
         android:id="@+id/search"

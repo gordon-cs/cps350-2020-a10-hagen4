@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         textData = (TextView) findViewById(R.id.getSummary);
 
         // Binds the XML textView object with java object using findViewById function
-        textData2 = (TextView) findViewById(R.id.sendRequest);
+        textData2 = (TextView) findViewById(R.id.getLocation);
 
         // Binds the XML textView object with java object using findViewById function
         textData3 = (TextView) findViewById(R.id.getTemp);
