@@ -20,26 +20,26 @@ public class ViewWeatherFragment extends Fragment {
     // Declaring private variables
     private String city;
     private String temperature;
-    private TextView textData;
-    private TextView textData2;
-    private TextView textData3;
+    private String summary;
 
     public ViewWeatherFragment() {
         // Required empty public constructor
     }
 
-    public ViewWeatherFragment(String city, String temperature) {
+    public ViewWeatherFragment(String city, String temperature, String summary) {
         //Constructors
         this.city = city;
         this.temperature = temperature;
+        this.summary = summary;
     }
 
-    public static ViewWeatherFragment newInstance(String city, String temperature) {
-        ViewWeatherFragment fragment = new ViewWeatherFragment(city, temperature);
+    public static ViewWeatherFragment newInstance(String city, String temperature, String summary) {
+        ViewWeatherFragment fragment = new ViewWeatherFragment(city, temperature, summary);
         //Bundles can hold all types of values and pass them to new activities
         Bundle bundle = new Bundle();
         bundle.putString("city", city);
         bundle.putString("temperature",temperature);
+        bundle.putString("summary", summary);
         fragment.setArguments(bundle);
         return fragment;
     }
@@ -50,6 +50,7 @@ public class ViewWeatherFragment extends Fragment {
         if (getArguments() != null) {
             city = getArguments().getString("city");
             temperature = getArguments().getString("temperature");
+            summary = getArguments().getString("summary");
         }
     }
 
@@ -64,11 +65,14 @@ public class ViewWeatherFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        TextView t = view.findViewById(R.id.getLocation);
-        t.setText(city);
+        TextView t = view.findViewById(R.id.getSummary);
+        t.setText(summary);
 
         TextView t2 = view.findViewById(R.id.getTemp);
         t2.setText(temperature);
+
+        TextView t3 = view.findViewById(R.id.getLocation);
+        t3.setText(city);
 
     }
 }
