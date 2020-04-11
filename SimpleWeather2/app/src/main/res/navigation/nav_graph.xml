@@ -15,6 +15,7 @@
             android:id="@+id/action_mainFragment_to_viewWeatherFragment"
             app:destination="@id/viewWeatherFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/viewWeatherFragment"
         android:name="com.example.simpleweather.ViewWeatherFragment"
@@ -24,6 +25,7 @@
             android:id="@+id/action_viewWeatherFragment_to_chooseData"
             app:destination="@id/chooseData" />
     </fragment>
+
     <fragment
         android:id="@+id/chooseData"
         android:name="com.example.simpleweather.ChooseData"
@@ -31,22 +33,3 @@
         tools:layout="@layout/fragment_choose_data" />
 </navigation>
 
-
-<activity
-android:id="@+id/mainActivity"
-android:name="com.example.simpleweather.MainActivity"
-android:label="activity_main"
-tools:layout="@layout/activity_main" />
-
-
-<fragment
-android:id="@+id/weatherFragment"
-android:name="com.example.simpleweather.WeatherFragment"
-android:label="passage_fragment"
-tools:layout="@layout/weather_fragment" />
-
-<fragment
-android:id="@+id/dataFragment"
-android:name="com.example.simpleweather.DataFragment"
-android:label="history_fragment"
-tools:layout="@layout/data_fragment" />
