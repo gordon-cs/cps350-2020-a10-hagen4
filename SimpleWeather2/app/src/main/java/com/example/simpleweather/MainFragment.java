@@ -7,6 +7,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,13 +33,13 @@ public class MainFragment extends Fragment {
 
     // Declaring private variables
     private Button reqButton;
-    //private TextView textData;
+    private TextView textData;
     private RequestQueue mRequestQueue;
-    //private StringRequest mStringRequest;
+    private StringRequest mStringRequest;
     private String url = "https://api.darksky.net/forecast/7711c2819f294564cb912e166a5bb983/42.589611,-70.819806";
-    //private String TAG = "weather";
-    //private TextView textData2;
-    //private TextView textData3;
+    private String TAG = "weather";
+    private TextView textData2;
+    private TextView textData3;
     private String location;
     private String weatherSum;
     private String temperature;
@@ -84,13 +85,6 @@ public class MainFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_main, container, false);
     }
 
-    public void replaceFragment(Fragment someFragment) {
-        FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        transaction.replace(R.id.parentLayout, someFragment);
-        transaction.addToBackStack(null);
-        transaction.commit();
-    }
-
 
     private void getWeather() {
 
@@ -102,7 +96,9 @@ public class MainFragment extends Fragment {
                 url, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
+
                 // Displays the first 500 characters of the response string.
+                Log.i(TAG, response.toString());
                 try {
                     // Parsing JSON response and getting summary from currently object
                     weatherSum = response.getJSONObject("currently").getString("summary");
@@ -126,7 +122,7 @@ public class MainFragment extends Fragment {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-
+                        Log.v(TAG, error.toString());
                     }
                 }
         );

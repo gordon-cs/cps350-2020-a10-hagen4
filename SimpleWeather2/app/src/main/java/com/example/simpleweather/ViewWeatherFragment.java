@@ -17,21 +17,26 @@ import android.widget.TextView;
  */
 public class ViewWeatherFragment extends Fragment {
 
+    // Declaring private variables
     private String city;
     private String temperature;
     private TextView textData;
+    private TextView textData2;
+    private TextView textData3;
 
     public ViewWeatherFragment() {
         // Required empty public constructor
     }
 
     public ViewWeatherFragment(String city, String temperature) {
+        //Constructors
         this.city = city;
         this.temperature = temperature;
     }
 
     public static ViewWeatherFragment newInstance(String city, String temperature) {
         ViewWeatherFragment fragment = new ViewWeatherFragment(city, temperature);
+        //Bundles can hold all types of values and pass them to new activities
         Bundle bundle = new Bundle();
         bundle.putString("city", city);
         bundle.putString("temperature",temperature);
@@ -59,8 +64,11 @@ public class ViewWeatherFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        // Binds the XML button object with java object using findViewById function
-        textData = (TextView) view.findViewById(R.id.getTemp);
-        textData.setText(city);
+        TextView t = view.findViewById(R.id.getLocation);
+        t.setText(city);
+
+        TextView t2 = view.findViewById(R.id.getTemp);
+        t2.setText(temperature);
+
     }
 }
