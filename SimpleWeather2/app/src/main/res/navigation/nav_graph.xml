@@ -3,36 +3,50 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/mainActivity">
-
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="com.example.simpleweather.MainActivity"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" />
+    app:startDestination="@id/mainFragment">
 
 
     <fragment
-        android:id="@+id/weatherFragment"
-        android:name="com.example.simpleweather.WeatherFragment"
-        android:label="passage_fragment"
-        tools:layout="@layout/weather_fragment" >
+        android:id="@+id/mainFragment"
+        android:name="com.example.simpleweather.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
         <action
-            android:id="@+id/action_weatherFragment_to_dataFragment2"
-            app:destination="@id/dataFragment" />
-        <action
-            android:id="@+id/action_weatherFragment_to_mainActivity2"
-            app:destination="@id/mainActivity" />
+            android:id="@+id/action_mainFragment_to_viewWeatherFragment"
+            app:destination="@id/viewWeatherFragment" />
     </fragment>
-
     <fragment
-        android:id="@+id/dataFragment"
-        android:name="com.example.simpleweather.DataFragment"
-        android:label="history_fragment"
-        tools:layout="@layout/data_fragment" >
+        android:id="@+id/viewWeatherFragment"
+        android:name="com.example.simpleweather.ViewWeatherFragment"
+        android:label="fragment_view_weather"
+        tools:layout="@layout/fragment_view_weather" >
         <action
-            android:id="@+id/action_dataFragment_to_weatherFragment3"
-            app:destination="@id/weatherFragment" />
+            android:id="@+id/action_viewWeatherFragment_to_chooseData"
+            app:destination="@id/chooseData" />
     </fragment>
-
+    <fragment
+        android:id="@+id/chooseData"
+        android:name="com.example.simpleweather.ChooseData"
+        android:label="fragment_choose_data"
+        tools:layout="@layout/fragment_choose_data" />
 </navigation>
+
+
+<activity
+android:id="@+id/mainActivity"
+android:name="com.example.simpleweather.MainActivity"
+android:label="activity_main"
+tools:layout="@layout/activity_main" />
+
+
+<fragment
+android:id="@+id/weatherFragment"
+android:name="com.example.simpleweather.WeatherFragment"
+android:label="passage_fragment"
+tools:layout="@layout/weather_fragment" />
+
+<fragment
+android:id="@+id/dataFragment"
+android:name="com.example.simpleweather.DataFragment"
+android:label="history_fragment"
+tools:layout="@layout/data_fragment" />
