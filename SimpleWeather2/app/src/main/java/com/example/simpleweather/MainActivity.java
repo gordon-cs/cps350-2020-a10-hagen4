@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         //makes sure to not add the fragment twice
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.container, MainFragment.newInstance(), "first")
+                    .replace(R.id.parentLayout, MainFragment.newInstance(), "first")
                     .commit();
         }
     }
