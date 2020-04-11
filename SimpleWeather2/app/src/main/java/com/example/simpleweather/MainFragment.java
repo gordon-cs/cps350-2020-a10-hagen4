@@ -109,7 +109,7 @@ public class MainFragment extends Fragment {
                     // Getting string from the JSON object
                     temperature = response.getJSONObject("currently").getString("temperature");
                     getFragmentManager().beginTransaction()
-                            .replace(R.id.container, ViewWeatherFragment.newInstance(location, "37", weatherSum), "second")
+                            .replace(R.id.container, ViewWeatherFragment.newInstance(location, temperature, weatherSum), "second")
                             .addToBackStack(null)
                             .commit();
 
