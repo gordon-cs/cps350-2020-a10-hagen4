@@ -13,6 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="summary"
+        android:textColor="@color/brightWhite"
         android:textSize="25sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -20,7 +21,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:textStyle="normal"
         app:layout_constraintHorizontal_bias=".15"
-        app:layout_constraintVertical_bias=".080" />
+        app:layout_constraintVertical_bias=".1" />
     <!-- End Summary -->
 
     <!-- Temperature -->
@@ -29,6 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="temperature"
+        android:textColor="@color/brightWhite"
         android:textSize="45sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -50,7 +52,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:background="#00a8cc"
         app:layout_constraintHorizontal_bias=".13"
-        app:layout_constraintVertical_bias=".310" />
+        app:layout_constraintVertical_bias=".288" />
     <!-- End Weather Icon -->
 
     <!-- Location -->
@@ -59,14 +61,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="location"
+        android:textColor="@color/brightWhite"
         android:textSize="25sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:textStyle="normal"
-        app:layout_constraintHorizontal_bias=".13"
-        app:layout_constraintVertical_bias=".440" />
+        app:layout_constraintHorizontal_bias=".18"
+        app:layout_constraintVertical_bias=".4" />
     <!-- End Location -->
 
     <LinearLayout
@@ -92,6 +95,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="data"
+                android:textColor="@color/brightWhite"
                 android:textSize="25sp"
                 android:textStyle="normal"
                 android:layout_gravity="center"/>
